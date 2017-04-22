@@ -36,5 +36,5 @@ python mobile_code_parser.py --encoding cp1251 --mail alice@example.com --mail b
 ## Автоматизация
 Можно автоматизировать процесс обновления репозитория и запуска рассылки, добавив в `/etc/crontab` ежедневный запуск (вместо `user` нужно указать пользователя, которому принадлежит директория с репозиторием):
 ```bash
-13 4 * * * user cd /opt/parsers && git pull && python mobile_code_parser.py --encoding cp1251 --mail alice@example.com
+13 4 * * * user cd /opt/parsers && git pull && .venv/bin/python mobile_code_parser.py --encoding cp1251 --mail alice@example.com
 ```
