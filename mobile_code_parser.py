@@ -118,14 +118,14 @@ def main():
     parse_to(out=new_file, encoding=args.encoding)
     if not os.path.exists(old_file) or diff(old_file, new_file, encoding=args.encoding):
         send_mail(
-            send_from='robot@220-volt.us',
+            send_from='eIGato@github.com',
             send_to=args.mail,
             subject='Мобильные коды',
             text='Новые мобильные коды во вложении.',
             files=[new_file])
     else:
         send_mail(
-            send_from='robot@220-volt.us',
+            send_from='eIGato@github.com',
             send_to=args.mail,
             subject='Мобильные коды',
             text='Со времени предыдущего парсинга коды не изменились. Используйте старый файл.',
